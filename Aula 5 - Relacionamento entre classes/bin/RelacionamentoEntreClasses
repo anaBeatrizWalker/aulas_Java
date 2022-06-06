@@ -1,0 +1,6 @@
+ASSOCIAÇÃO (has-a)
+1-1: a classe A possui só uma referência a classe B, 
+ou vice versa;
+
+1-N: a classe A possui uma lista de referências 
+(um array list de refs) a classe B;

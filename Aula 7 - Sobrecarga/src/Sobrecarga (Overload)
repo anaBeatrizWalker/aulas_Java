@@ -1,0 +1,24 @@
+Sobrecarga (Overload)
+É uma maneira de se lidar com ambiguidades ocorridas na nomeação de métodos.
+A maniera de se tratar amibiguidades pela sobrecarga é diferenciando métodos
+com o mesmo nome pela quantidade de parâmetros ou pelos seus tipos. Essa
+ambiguidade é tratada em tempo de compilação
+
+Exemplo:
+Resolvendo a ambiguidade: não se pode ter métodos totalmente iguais, precisam
+se diferenciar ou pela quantidade de parâmetros ou pelo tipo do parâmetro (int, 
+double)
+class Foo{
+	public void metodo(){
+	
+	}
+	public void metodo(int x){
+	
+	}
+	public void metodo(double x){
+	
+	}
+}
+
+Observação: o retorno e o modificador pode ser mudado, cláusula throws pode ser incluído
+(não resolvem as ambiguidades, mas podem ocorrer)

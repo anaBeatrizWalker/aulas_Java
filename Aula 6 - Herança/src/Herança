@@ -1,0 +1,14 @@
+Herança
+
+- Relação hierárquica entre classes, contendo uma
+superclasse e algumas subclasses. Nessa relação uma subclasse
+possui acesso privilegiado a métodos e atributos (acessíveis) da
+classe superior (o contrário não ocorre). Essa relação de herança
+também pode ser entendida como uma forma subtipagem (subclasse é 
+enxergada como subtipo de uma superclasse).
+
+Regras da herança
+
+- Reflexiva: classe A <= (é subclasse) classe A (A herda de A = A é uma subclasse
+dela mesma);
+- Transitiva: se A <= B e B <= C então A <= C

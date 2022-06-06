@@ -1,0 +1,56 @@
+Classes abstratas: classes que permitem o uso de métodos abstratos e não
+podem ser instanciadas. Seu intuito é modelar um comportamento de forma
+genérica, deixando as especificidades para as subclasses. Classes abstratas
+podem ter atributos e construtores.
+
+Método abstrato: método sem corpo de código que espera ser sobrescrito em
+alguma subclasse que não seja abstrata Qualquer subclasse concreta (não 
+abstrata) tem a obrigação de sobrescrever o método abstrato.
+
+Para identificar um método abstrato:
+1) O método precisa depender das subclasses
+2) O método implementado não deve fazer sentido na classe
+
+-------------------------------------------------------------------------
+
+Interface: possui o mesmo intuito que uma classe abstrata, porém com
+algumas diferenças bastante relevantes, como:
+1) Não possuir atributos, apenas constantes
+2) Não é presa na herança simples, simula herança múltipla, ou seja, uma
+classe pode implementar várias interfaces
+3) Usa implements ao invés de extends
+4) Todo método definido é por padrão público e abstrato
+Toda interface pode ter métodos estáticos e default. Um método default
+indica que esse método temuma implementação padrão, diferentemente do 
+método abstrato que não tem. O método default também só existe nas 
+interfaces
+
+Obs: se tem atributo é classe abstrata, se não é interface.
+
+Obs: classe extends classe
+	classe implements interface1, interface2...
+	interface1 extends interface2 (herança de interfaces)
+
+------------------------------------------------------------------------
+
+Subtipo: seja A um tipo, B um subtipo é representado por B < A (B 
+extends A ou B implements A).
+
+Polimorfismo de subtipos: em um contexto que se aceita um tipo A, o 
+polimorfismo de subtipos faz com que sob o mesmo contexto seja aceito
+quaisquer subtipos de A. Essa caracteristica nos mostra que uma referência
+pode ser representada de várias formas distintas
+
+Exemplo: B < A
+
+public void metodo(A a){
+
+}
+metodo(new B()); //é aceito em tempo de compilação. Obs: se B não fosse
+subtipo de A, isso não seria possivel
+
+A a = new B(); //também é aceito
+
+Obs: a referência A é mais fraca e permite esconder a implementação B.
+Em tempo de execução quaisquer métodos que são sobrescritos em B serão
+chamados (dispacho dinâmico)

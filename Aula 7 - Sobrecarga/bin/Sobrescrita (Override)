@@ -1,0 +1,35 @@
+Sobrescrista (Override)
+É uma maneira de se lidar com ambiguidades ocorridas na nomeação de métodos.
+Porém, as ambiguidades ocorrerão num contexto de herança (onde envolve subtipos)
+e são resolvidas em tempo de execução (dispacho dinâmico). Essa resolução 
+em tempo de execução, é conhecida apenas na instância do objeto, por exemplo,
+se tivermos um método chamado "algo" em A e um método "algo" em B, com B subclasse
+de A, vamos saber apenas após a instância do objeto e na hora da chamada,
+qual dos métodos "algo" será chamado de fato (da classe A ou da classe B)
+
+class A {
+	public void algo(){
+		Syso("método de A")
+	}
+}
+
+class B {
+	@Override //annotation, documenta que é uma sobrescrita e ajuda a saber
+	se a sobrescrita está sendo feita corretamente
+	public void algo(){
+		Syso("método de B")
+	}
+}
+
+class Teste {
+	B b = new B();
+	b.algo(); //Aqui sabe-se que o método algo é da classe B
+}
+
+Observação: os métodos precisam ser totalmente idênticos, com a mesma 
+assinatura. Também não é possivel mudar o retorno e nem abaixar/diminuir
+ a visibilidade.
+ 
+A ambiguidade introduzida nos faz diferenciar os comportamentos
+dos método não pelo nome deles, mas sim pelas classes ao qual
+são definidos.
