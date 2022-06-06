@@ -1,0 +1,18 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeLeaf.org">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" th:href="@{css/principal.css}">
+	<script th:src="@{js/script.js}"></script>
+	<title>Formulário Soma</title>
+</head>
+<body>
+	<form th:action="@{/calcsoma}" method="POST" th:object="${calc}">
+		N1: <input type="number" th:field="*{n1}"><BR>
+		N2: <input type="number" th:field="*{n1}"><br>
+		<input type="submit" value="Calcular">
+	</form>
+	
+	<a th:href="@{/}">Voltar</a>
+</body>
+</html>

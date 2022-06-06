@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeLeaf.org">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" th:href="@{css/principal.css}">
+	<script th:src="@{js/script.js}"></script>
+	<title>Página Três</title>
+</head>
+<body>
+	<h1>Bem-vindo a Página Três</h1>
+	
+	<button th:onclick="ola()">Ok</button>
+	
+	<ul>
+		<li> <a th:href="@{/}"> Voltar </a> </li>
+		<li> <a th:href="@{/pagina2}"> Página Dois </a> </li>
+	</ul>
+</body>
+</html>

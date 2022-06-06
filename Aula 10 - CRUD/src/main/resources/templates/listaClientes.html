@@ -1,0 +1,37 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeLeaf.org">
+<head>
+	<meta charset="UTF-8">
+	<title>Lista de Clientes</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<td><b>ID</b></td>
+				<td><b>Nome</b></td>
+				<td><b>CPF</b></td>
+				<td><b></b></td> <!--Botões de apagar e editar-->
+				<td><b></b></td>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="cli : ${clientes}">
+				<td th:text="${cli.id}"></td>
+				<td th:text="${cli.nome}"></td>
+				<td th:text="${cli.cpf}"></td>
+				<td>
+					<a th:href="@{'editar/' + ${cli.id}}">Editar</a>
+				</td>
+				<td>
+					<form th:action="@{'apagar/cliente/' + ${cli.id}}" method=post>
+						<input type=submit value="Apagar">
+					</form>
+				</td>
+			</tr>
+		</tbody>
+	<table>
+	
+	<a th:href="@{/}">Voltar</a>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeLeaf.org">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" th:href="@{css/principal.css}">
+	<script th:src="@{js/script.js}"></script>
+	<title>Página Inicial</title>
+</head>
+<body>
+	<h1>Olá, bem-vindo a Página Inicial</h1>
+	
+	<button th:onclick="ola()">Ok</button>
+	
+	<ul>
+		<li> <a th:href="@{/pagina2}"> Página Dois </a> </li>
+		<li> <a th:href="@{/pagina3}"> Página Três </a> </li>
+		<li> <a th:href="@{/soma?n1=10&n2=5}"> Somar parâmetros </a> </li>
+		<li> <a th:href="@{/multiplica/n1/10/n2/5}"> Multiplicar parâmetros </a> </li>
+		<li> <a th:href="@{/calcsoma}"> Formulário </a> </li>
+	</ul>
+	
+	<img th:src="@{img/js.jpg}" alt="Imagem"/>
+</body>
+</html>

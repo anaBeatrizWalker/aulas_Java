@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://thymeLeaf.org">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" th:href="@{css/principal.css}">
+	<title>Cadastro de Cliente</title>
+</head>
+<body>
+	<h1>Aula de CRUD</h1>
+	<!--
+	<button th:onclick="ola()">Ok</button>
+	-->
+	<ul>
+		<li> <a th:href="@{/cliente}"> Inserir </a> </li>
+		<li> <a th:href="@{/buscar}"> Buscar perfil </a> </li>
+		<li> <a th:href="@{/clientes}"> Listar clientes </a> </li>
+		<li> Para visualizar um perfil digite /perfil/{id do usuário} na URL </li>
+	</ul>
+</body>
+</html>
